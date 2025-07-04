@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Donate - AMIS Nigeria</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">AMIS</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="schools.html">Member Schools</a></li>
+          <li class="nav-item"><a class="nav-link active" href="donate.html">Donate</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container py-5" style="padding-top: 100px;">
+    <h1 class="mb-4">Donate to AMIS Nigeria</h1>
+    <p>Your generous donation helps us support Islamic education across Nigeria.</p>
+    <form>
+      <div class="mb-3">
+        <label for="donorName" class="form-label">Full Name</label>
+        <input type="text" class="form-control" id="donorName" placeholder="Your full name" />
+      </div>
+      <div class="mb-3">
+        <label for="donorEmail" class="form-label">Email address</label>
+        <input type="email" class="form-control" id="donorEmail" placeholder="name@example.com" />
+      </div>
+      <div class="mb-3">
+        <label for="donationAmount" class="form-label">Donation Amount (NGN)</label>
+        <input type="number" class="form-control" id="donationAmount" placeholder="Amount in Naira" />
+      </div>
+      <button type="submit" class="btn btn-success">Donate Now</button>
+    </form>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
