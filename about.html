@@ -3,9 +3,60 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>About Us - AMIS Nigeria</title>
+  <title>About Us 2 - AMIS Nigeria</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
+  <style>
+    .member-alternate {
+      display: flex;
+      align-items: center;
+      margin-bottom: 2rem;
+    }
+    .member-alternate.even {
+      flex-direction: row-reverse;
+    }
+    .member-alternate img {
+      width: 300px;
+      height: 500px;
+      object-fit: cover;
+      object-position: top;
+      border-radius: 15px;
+      flex-shrink: 0;
+    }
+    .member-bio {
+      padding: 0 2rem;
+      max-width: 600px;
+    }
+    .member-bio h5 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+      color: #333;
+    }
+    .member-bio p {
+      color: #666;
+      line-height: 1.6;
+      margin-bottom: 0;
+    }
+    @media (max-width: 768px) {
+      .member-alternate {
+        flex-direction: column !important;
+        text-align: center;
+      }
+      .member-alternate.even {
+        flex-direction: column !important;
+      }
+      .member-alternate img {
+        width: 100%;
+        height: auto;
+        margin-bottom: 1rem;
+      }
+      .member-bio {
+        padding: 0;
+        max-width: 100%;
+      }
+    }
+  </style>
 </head>
 <body>
   <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
@@ -17,7 +68,7 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link active" href="about.html">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
           <li class="nav-item"><a class="nav-link" href="schools.html">Member Schools</a></li>
           <li class="nav-item"><a class="nav-link" href="donate.html">Donate</a></li>
           <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
@@ -25,13 +76,144 @@
       </div>
     </div>
   </nav>
-
-  <main class="container py-5" style="padding-top: 100px;">
+<main class="container py-5" style="padding-top: 100px;">
     <h1 class="mb-4">About AMIS Nigeria</h1>
     <p>Association of Model Islamic Schools Nigeria (AMIS) is committed to fostering unity of idea and co-operation among private Islamically oriented Nursery, Primary and Secondary Schools in Nigeria.</p>
     <p>We engage in formulation and implementation of programmes and policies aimed at assisting the regulation, growth and improvement of standards in member schools. We also serve as a mouthpiece for member schools in relation to government.</p>
+  
+
+    <h1 class="mb-5 text-center">Members</h1>
+
+    <div class="member-alternate">
+      <img src="images/IMG-20250901-WA0031.jpg" alt="Member 1" />
+      <div class="member-bio">
+        <h5>Member 1</h5>
+        <p>Placeholder bio for Member 1. This is a short description about the member.</p>
+      </div>
+    </div>
+    <hr />
+
+    <div class="member-alternate even">
+      <img src="images/IMG-20250901-WA0032.jpg" alt="Member 2" />
+      <div class="member-bio">
+        <h5>Member 2</h5>
+        <p>Placeholder bio for Member 2. This is a short description about the member.</p>
+      </div>
+    </div>
+    <hr />
+
+    <div class="member-alternate">
+      <img src="images/IMG-20250901-WA0033.jpg" alt="Member 3" />
+      <div class="member-bio">
+        <h5>Member 3</h5>
+        <p>Placeholder bio for Member 3. This is a short description about the member.</p>
+      </div>
+    </div>
+
+    <hr />
+
+    <div class="member-alternate even">
+      <img src="images/IMG-20250901-WA0034.jpg" alt="Member 4" />
+      <div class="member-bio">
+        <h5>Member 4</h5>
+        <p>Placeholder bio for Member 4. This is a short description about the member.</p>
+      </div>
+    </div>
+
+    <hr />
+
+    <div class="member-alternate">
+      <img src="images/IMG-20250901-WA0035.jpg" alt="Member 5" />
+      <div class="member-bio">
+        <h5>Member 5</h5>
+        <p>Placeholder bio for Member 5. This is a short description about the member.</p>
+      </div>
+    </div>
+
+    <hr />
+
+    <div class="member-alternate even">
+      <img src="images/IMG-20250901-WA0036.jpg" alt="Member 6" />
+      <div class="member-bio">
+        <h5>Member 6</h5>
+        <p>Placeholder bio for Member 6. This is a short description about the member.</p>
+      </div>
+    </div>
+
+    <hr />
+
+    <div class="member-alternate">
+      <img src="images/IMG-20250901-WA0037.jpg" alt="Member 7" />
+      <div class="member-bio">
+        <h5>Member 7</h5>
+        <p>Placeholder bio for Member 7. This is a short description about the member.</p>
+      </div>
+    </div>
+
+    <hr />
+
+    <div class="member-alternate even">
+      <img src="images/IMG-20250901-WA0038.jpg" alt="Member 8" />
+      <div class="member-bio">
+        <h5>Member 8</h5>
+        <p>Placeholder bio for Member 8. This is a short description about the member.</p>
+      </div>
+    </div>
+
+    <hr />
+
+    <div class="member-alternate">
+      <img src="images/IMG-20250901-WA0039.jpg" alt="Member 9" />
+      <div class="member-bio">
+        <h5>Member 9</h5>
+        <p>Placeholder bio for Member 9. This is a short description about the member.</p>
+      </div>
+    </div>
+    <hr />
+
+    <div class="member-alternate even">
+      <img src="images/123.jpg" alt="Member 8" />
+      <div class="member-bio">
+        <h5>Member 8</h5>
+        <p>Placeholder bio for Member 8. This is a short description about the member.</p>
+      </div>
+    </div>
+
   </main>
 
+  <!-- Footer -->
+    <footer class="footer bg-dark text-white py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h3>AMIS Nigeria</h3>
+                    <p class="mb-2">Contact our National President: +234-8036910006</p>
+                    <p>National Secretary: +234-7067676267</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <div class="social-links">
+                        <a href="#" class="text-white me-3"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-instagram"></i></a>
+                    </div>
+                    <div class="mt-3">
+                        <a href="https://amisnigeria.org" class="text-white text-decoration-none">www.amisnigeria.org</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    document.querySelectorAll('.member-alternate').forEach(member => {
+      member.addEventListener('mouseenter', () => {
+        member.classList.add('highlight');
+      });
+      member.addEventListener('mouseleave', () => {
+        member.classList.remove('highlight');
+      });
+    });
+  </script>
 </body>
 </html>
