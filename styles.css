@@ -17,6 +17,12 @@ body {
     color: #00843D !important;
 }
 
+.navbar-logo {
+    height: 50px;
+    width: auto;
+    margin-right: 10px;
+}
+
 .nav-link {
     font-weight: 500;
     color: #333 !important;
