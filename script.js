@@ -16,3 +16,15 @@ window.addEventListener('scroll', function() {
         document.querySelector('.navbar').classList.remove('bg-white');
     }
 });
+
+// Initialize hero carousel explicitly to ensure auto-slide every 3 seconds
+document.addEventListener('DOMContentLoaded', function() {
+    var heroCarousel = document.querySelector('#heroCarousel');
+    if (heroCarousel) {
+        var carousel = new bootstrap.Carousel(heroCarousel, {
+            interval: 3000,
+            wrap: true,
+            ride: 'carousel'
+        });
+    }
+});

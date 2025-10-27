@@ -1,10 +1,7 @@
-# Task: Change Carousel Arrows to Green
+# TODO: Convert Hero Section to Slider
 
-## Steps from Approved Plan
-
-1. [x] Edit styles.css: Remove hue-rotate filter from .carousel-control-prev and .carousel-control-next to prevent color alteration.
-2. [x] Edit styles.css: Reinforce color: #28a745 !important; on .carousel-control-prev .fs-1 and .carousel-control-next .fs-1 with higher specificity if needed.
-3. [x] Edit styles.css: Ensure .carousel-control-prev-icon and .carousel-control-next-icon have background: none; to avoid icon interference with text spans.
-4. [x] Test the changes by launching index.html in browser and verifying arrow color via screenshot.
-5. [x] Update TODO.md with completion status.
-6. [x] Fix text overlapping by adjusting carousel control width and inner padding.
+## Steps to Complete
+- [x] Modify index.html: Replace static hero section with Bootstrap carousel using slider1.jpg to slider5.jpg images
+- [x] Update styles.css: Add styles for the hero carousel to maintain full height, overlay, and responsiveness
+- [ ] Test the carousel functionality (auto-slide, navigation, image loading)
+- [ ] Verify responsiveness on mobile devices
