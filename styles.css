@@ -599,6 +599,7 @@ hr {
     padding: 14px 16px;
     border-radius: 8px;
     box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    margin-bottom: 50px;
 }
 
 /* smaller heading / text already used (h4 + .small) */
