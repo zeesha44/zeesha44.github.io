@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Founding Mothers - AMIS Nigeria</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- reuse same navbar (copy from about.html) -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html"><img src="images/logo.jpg" alt="AMIS Logo" class="navbar-logo"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle active" href="#" id="aboutDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              About Us
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="aboutDropdown">
+              <li><a class="dropdown-item" href="about.html">National Executive Council</a></li>
+              <li><a class="dropdown-item active" href="founding-mothers.html">Founding Mothers</a></li>
+              <li><a class="dropdown-item" href="state-chapters.html">State Chapters</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="schools.html">Member Schools</a></li>
+          <li class="nav-item"><a class="nav-link" href="donate.html">Donate</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container py-5" style="padding-top:100px;">
+    <h1 class="mb-4 text-center">Founding Mothers</h1>
+    <p class="lead text-center">Profiles of the founding mothers of AMIS Nigeria.</p>
+
+    <!-- Add individual cards / member blocks here -->
+    <div class="row g-4">
+      <div class="col-md-6">
+        <div class="card">
+          <img src="images/founding1.jpg" class="card-img-top" alt="Founding Mother">
+          <div class="card-body">
+            <h5 class="card-title">Founding Mother Name</h5>
+            <p class="card-text">Short bio / role.</p>
+          </div>
+        </div>
+      </div>
+      <!-- duplicate cards as needed -->
+    </div>
+  </main>
+
+  <footer class="footer bg-dark text-white py-4 mt-5">
+    <div class="container text-center">© AMIS Nigeria</div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -27,4 +27,31 @@ document.addEventListener('DOMContentLoaded', function() {
             ride: 'carousel'
         });
     }
+
+    // Multi-step form functionality
+    const proprietorshipRadios = document.querySelectorAll('input[name="proprietorshipType"]');
+    proprietorshipRadios.forEach(radio => {
+        radio.addEventListener('change', function() {
+            const step3 = document.getElementById('step3');
+            const step4 = document.getElementById('step4');
+            if (this.value === 'sole') {
+                step3.style.display = 'block';
+                step4.style.display = 'none';
+            } else if (this.value === 'partnership') {
+                step3.style.display = 'none';
+                step4.style.display = 'block';
+            }
+        });
+    });
+
+    // School level other option
+    const schoolLevelSelect = document.getElementById('schoolLevel');
+    const otherLevelDiv = document.getElementById('otherLevelDiv');
+    schoolLevelSelect.addEventListener('change', function() {
+        if (this.value === 'other') {
+            otherLevelDiv.style.display = 'block';
+        } else {
+            otherLevelDiv.style.display = 'none';
+        }
+    });
 });

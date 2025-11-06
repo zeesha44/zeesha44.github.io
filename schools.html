@@ -4,52 +4,12 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Member Schools - AMIS Nigeria</title>
+    <title>AMIS MEMBERSHIP REGISTRATION FORM</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
     <link rel="icon" href="images/logo.jpg" type="image/jpg">
     <style>
         /* Previous styles remain the same */
-        .step-wizard {
-            display: flex;
-            justify-content: center;
-            margin-bottom: 40px;
-        }
-        .step-wizard-item {
-            flex: 1;
-            max-width: 150px;
-            text-align: center;
-            position: relative;
-        }
-        .step-wizard-item:not(:last-child):after {
-            content: '';
-            position: absolute;
-            top: 20px;
-            width: 100%;
-            height: 2px;
-            background: #ddd;
-            right: -50%;
-        }
-        .step-wizard-item.active .step-wizard-circle {
-            background: #198754;
-            color: white;
-        }
-        .step-wizard-circle {
-            width: 40px;
-            height: 40px;
-            background: #ddd;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 10px;
-        }
-        .form-section {
-            display: none;
-        }
-        .form-section.active {
-            display: block;
-        }
         #formMessage {
             display: none;
             margin-bottom: 20px;
@@ -59,55 +19,40 @@
 <body>
     <!-- Previous navigation remains the same -->
     <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="index.html"><img src="images/logo.jpg" alt="AMIS Logo" class="navbar-logo"></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="schools.html">Member Schools</a></li>
-                    <li class="nav-item"><a class="nav-link" href="donate.html">Donate</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+    <div class="container">
+      <a class="navbar-brand" href="index.html"><img src="images/logo.jpg" alt="AMIS Logo" class="navbar-logo"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              About Us
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="aboutDropdown">
+              <li><a class="dropdown-item" href="about.html">National Executive Council</a></li>
+              <li><a class="dropdown-item" href="founding-mothers.html">Founding Mothers</a></li>
+              <li><a class="dropdown-item" href="state-chapters.html">State Chapters</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="schools.html">Member Schools</a></li>
+          <li class="nav-item"><a class="nav-link" href="donate.html">Donate</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
     <main class="container py-5" style="padding-top: 100px;">
-        <h1 class="mb-4">School Registration</h1>
+        <h1 class="mb-4">AMIS MEMBERSHIP REGISTRATION FORM</h1>
         
         <div id="formMessage" class="alert" role="alert"></div>
 
-        <!-- Previous step wizard remains the same -->
-        <div class="step-wizard mb-5">
-            <div class="step-wizard-item active">
-                <div class="step-wizard-circle">1</div>
-                <div>Category</div>
-            </div>
-            <div class="step-wizard-item">
-                <div class="step-wizard-circle">2</div>
-                <div>Information</div>
-            </div>
-            <div class="step-wizard-item">
-                <div class="step-wizard-circle">3</div>
-                <div>Images</div>
-            </div>
-            <div class="step-wizard-item">
-                <div class="step-wizard-circle">4</div>
-                <div>Account</div>
-            </div>
-            <div class="step-wizard-item">
-                <div class="step-wizard-circle">5</div>
-                <div>Terms</div>
-            </div>
-        </div>
-
         <form id="schoolRegistrationForm" enctype="multipart/form-data">
             <!-- Step 1: Category Selection with updated states -->
-            <div class="form-section active" id="step1">
+            
                 <h3 class="mb-4">Category Selection</h3>
                 <div class="mb-3">
                     <label for="stateChapter" class="form-label">State Chapter*</label>
@@ -159,35 +104,478 @@
                         <option value="premium">Premium Listing</option>
                     </select>
                 </div>
-                <button type="button" class="btn btn-success" onclick="nextStep(2)">Next</button>
-            </div>
-
-            <!-- Rest of the form sections remain the same -->
-            <!-- Step 2: School Information -->
-            <div class="form-section" id="step2">
-                <h3 class="mb-4">School Information</h3>
+                
+                <h3 class="mb-4">School Location and Basic Information</h3>
                 <div class="mb-3">
-                    <label for="schoolName" class="form-label">School Name*</label>
+                    <label class="form-label">School Location:</label>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <label for="lga" class="form-label">LGA:</label>
+                            <input type="text" class="form-control" id="lga" name="lga">
+                        </div>
+                        <div class="col-md-4">
+                            <label for="ward" class="form-label">Ward:</label>
+                            <input type="text" class="form-control" id="ward" name="ward">
+                        </div>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="schoolLevel" class="form-label">School Level:</label>
+                    <select class="form-control" id="schoolLevel" name="schoolLevel" required>
+                        <option value="">-- Choose One --</option>
+                        <option value="nur_pry">Nursery/Primary</option>
+                        <option value="secondary">Secondary</option>
+                        <option value="other">Any other</option>
+                    </select>
+                </div>
+                <div class="mb-3" id="otherLevelDiv" style="display: none;">
+                    <label for="otherLevel" class="form-label">Specify Other Level:</label>
+                    <input type="text" class="form-control" id="otherLevel" name="otherLevel">
+                </div>
+                <div class="mb-3">
+                    <label for="schoolName" class="form-label">School Name (As registered by CAC):</label>
                     <input type="text" class="form-control" id="schoolName" name="schoolName" required>
                 </div>
                 <div class="mb-3">
-                    <label for="address" class="form-label">Address*</label>
-                    <textarea class="form-control" id="address" name="address" rows="3" required></textarea>
+                    <label for="cacRegNo" class="form-label">CAC Registration Number:</label>
+                    <input type="text" class="form-control" id="cacRegNo" name="cacRegNo" required>
                 </div>
                 <div class="mb-3">
-                    <label for="phone" class="form-label">Phone Number*</label>
-                    <input type="tel" class="form-control" id="phone" name="phone" required>
+                    <label class="form-label">School contact information:</label>
+                    <div class="mb-3">
+                        <label for="physicalAddress" class="form-label">Physical address:</label>
+                        <textarea class="form-control" id="physicalAddress" name="physicalAddress" rows="3" required></textarea>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label for="phoneNos" class="form-label">Phone Numbers:</label>
+                            <input type="text" class="form-control" id="phoneNos" name="phoneNos" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="whatsappNos" class="form-label">WhatsApp Numbers:</label>
+                            <input type="text" class="form-control" id="whatsappNos" name="whatsappNos">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label for="emailAddresses" class="form-label">Email Address:</label>
+                            <input type="email" class="form-control" id="emailAddresses" name="emailAddresses" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="socialMedia" class="form-label">Social Media Handles:</label>
+                            <textarea class="form-control" id="socialMedia" name="socialMedia" rows="2"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <label for="establishedDate" class="form-label">Date School was Established (Month / Year):</label>
+                        <input type="month" class="form-control" id="establishedDate" name="establishedDate" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="amisJoinDate" class="form-label">Date School Joined AMIS (Month / Year):</label>
+                        <input type="month" class="form-control" id="amisJoinDate" name="amisJoinDate">
+                    </div>
                 </div>
                 <div class="mb-3">
-                    <label for="email" class="form-label">Email Address*</label>
-                    <input type="email" class="form-control" id="email" name="email" required>
+                    <label for="amisRegNo" class="form-label">School AMIS Registration Number:</label>
+                    <input type="text" class="form-control" id="amisRegNo" name="amisRegNo">
                 </div>
-                <button type="button" class="btn btn-secondary me-2" onclick="prevStep(1)">Previous</button>
-                <button type="button" class="btn btn-success" onclick="nextStep(3)">Next</button>
-            </div>
-
-            <!-- Step 3: School Images -->
-            <div class="form-section" id="step3">
+                <div class="mb-3">
+                    <label class="form-label">Proprietorship Type:</label>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="proprietorshipType" id="sole" value="sole" required>
+                        <label class="form-check-label" for="sole">Sole Proprietor</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="proprietorshipType" id="partnership" value="partnership" required>
+                        <label class="form-check-label" for="partnership">Partnership</label>
+                    </div>
+                </div>
+               
+                <div id="soleSection">
+                    <h3 class="mb-4">Sole proprietor's detail (if Sole Proprietorship)</h3>
+                    <div class="mb-3">
+                        <label for="soleName" class="form-label">Name:</label>
+                        <input type="text" class="form-control" id="soleName" name="soleName" required>
+                    </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <label for="soleGender" class="form-label">Gender:</label>
+                        <select class="form-control" id="soleGender" name="soleGender" required>
+                            <option value="">-- Choose --</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">Age:</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="soleAge" id="soleAge21" value="21-30" required>
+                            <label class="form-check-label" for="soleAge21">21-30</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="soleAge" id="soleAge31" value="31-40" required>
+                            <label class="form-check-label" for="soleAge31">31-40</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="soleAge" id="soleAge41" value="41-50" required>
+                            <label class="form-check-label" for="soleAge41">41-50</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="soleAge" id="soleAge51" value="51-60" required>
+                            <label class="form-check-label" for="soleAge51">51-60</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="soleAge" id="soleAge61" value="61-70" required>
+                            <label class="form-check-label" for="soleAge61">61-70</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="soleAge" id="soleAgeOver" value="Over 70" required>
+                            <label class="form-check-label" for="soleAgeOver">Over 70</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <label for="solePhone" class="form-label">Phone Number:</label>
+                        <input type="text" class="form-control" id="solePhone" name="solePhone" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="soleWhatsapp" class="form-label">WhatsApp Numbers:</label>
+                        <input type="text" class="form-control" id="soleWhatsapp" name="soleWhatsapp">
+                    </div>
+                </div>
+                <div class="mb-3">
+                        <label for="soleEmail" class="form-label">Email Address:</label>
+                        <input type="email" class="form-control" id="soleEmail" name="soleEmail" required>
+                    </div>
+                </div>
+                
+                <div id="partnershipSection">
+                    <h3 class="mb-4">Partnership Details (if Partnership)</h3>
+                    <p>Contact Person's Detail:</p>
+                    <div class="mb-3">
+                        <label for="partnerName" class="form-label">Name:</label>
+                        <input type="text" class="form-control" id="partnerName" name="partnerName" required>
+                    </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <label for="partnerGender" class="form-label">Gender:</label>
+                        <select class="form-control" id="partnerGender" name="partnerGender" required>
+                            <option value="">-- Choose --</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">Age:</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="partnerAge" id="partnerAge21" value="21-30" required>
+                            <label class="form-check-label" for="partnerAge21">21-30</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="partnerAge" id="partnerAge31" value="31-40" required>
+                            <label class="form-check-label" for="partnerAge31">31-40</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="partnerAge" id="partnerAge41" value="41-50" required>
+                            <label class="form-check-label" for="partnerAge41">41-50</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="partnerAge" id="partnerAge51" value="51-60" required>
+                            <label class="form-check-label" for="partnerAge51">51-60</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="partnerAge" id="partnerAge61" value="61-70" required>
+                            <label class="form-check-label" for="partnerAge61">61-70</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="partnerAge" id="partnerAgeOver" value="Over 70" required>
+                            <label class="form-check-label" for="partnerAgeOver">Over 70</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <label for="partnerPhone" class="form-label">Phone Number:</label>
+                        <input type="text" class="form-control" id="partnerPhone" name="partnerPhone" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="partnerWhatsapp" class="form-label">WhatsApp Numbers</label>
+                        <input type="text" class="form-control" id="partnerWhatsapp" name="partnerWhatsapp">
+                    </div>
+                </div>
+                 <div class="mb-3">
+                        <label for="partnerEmail" class="form-label">Email Address:</label>
+                        <input type="email" class="form-control" id="partnerEmail" name="partnerEmail" required>
+                    </div>
+                    <h5 class="mt-4">Co-owners / Partners</h5>
+                <div class="co-owner mb-3">
+                    <h6>i.</h6>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label for="coOwner1Name" class="form-label">Name:</label>
+                            <input type="text" class="form-control" id="coOwner1Name" name="coOwner1Name">
+                        </div>
+                        <div class="col-md-3">
+                            <label for="coOwner1Phone" class="form-label">Phone Number:</label>
+                            <input type="text" class="form-control" id="coOwner1Phone" name="coOwner1Phone">
+                        </div>
+                        <div class="col-md-3">
+                            <label for="coOwner1Whatsapp" class="form-label">WhatsApp Number:</label>
+                            <input type="text" class="form-control" id="coOwner1Whatsapp" name="coOwner1Whatsapp">
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="coOwner1Email" class="form-label">Email Address:</label>
+                        <input type="email" class="form-control" id="coOwner1Email" name="coOwner1Email">
+                    </div>
+                </div>
+                <div class="co-owner mb-3">
+                    <h6>ii.</h6>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label for="coOwner1Name" class="form-label">Name:</label>
+                            <input type="text" class="form-control" id="coOwner1Name" name="coOwner1Name">
+                        </div>
+                        <div class="col-md-3">
+                            <label for="coOwner1Phone" class="form-label">Phone Number:</label>
+                            <input type="text" class="form-control" id="coOwner1Phone" name="coOwner1Phone">
+                        </div>
+                        <div class="col-md-3">
+                            <label for="coOwner1Whatsapp" class="form-label">WhatsApp Number:</label>
+                            <input type="text" class="form-control" id="coOwner1Whatsapp" name="coOwner1Whatsapp">
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="coOwner1Email" class="form-label">Email Address:</label>
+                        <input type="email" class="form-control" id="coOwner1Email" name="coOwner1Email">
+                    </div>
+                    
+                </div>
+                <div class="co-owner mb-3">
+                    <h6>iii.</h6>
+                    <div class="row">
+                       <div class="col-md-6">
+                            <label for="coOwner1Name" class="form-label">Name:</label>
+                            <input type="text" class="form-control" id="coOwner1Name" name="coOwner1Name">
+                        </div>
+                        <div class="col-md-3">
+                            <label for="coOwner1Phone" class="form-label">Phone Number:</label>
+                            <input type="text" class="form-control" id="coOwner1Phone" name="coOwner1Phone">
+                        </div>
+                        <div class="col-md-3">
+                            <label for="coOwner1Whatsapp" class="form-label">WhatsApp Number:</label>
+                            <input type="text" class="form-control" id="coOwner1Whatsapp" name="coOwner1Whatsapp">
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="coOwner1Email" class="form-label">Email Address:</label>
+                        <input type="email" class="form-control" id="coOwner1Email" name="coOwner1Email">
+                    </div>
+                </div>
+                </div>
+                
+                <h3 class="mb-4">Head of School's detail</h3>
+                <div class="mb-3">
+                    <label for="headName" class="form-label">Name:</label>
+                    <input type="text" class="form-control" id="headName" name="headName" required>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <label for="headGender" class="form-label">Gender:</label>
+                        <select class="form-control" id="headGender" name="headGender" required>
+                            <option value="">-- Choose --</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">Age:</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="headAge" id="headAge21" value="21-30" required>
+                            <label class="form-check-label" for="headAge21">21-30</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="headAge" id="headAge31" value="31-40" required>
+                            <label class="form-check-label" for="headAge31">31-40</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="headAge" id="headAge41" value="41-50" required>
+                            <label class="form-check-label" for="headAge41">41-50</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="headAge" id="headAge51" value="51-60" required>
+                            <label class="form-check-label" for="headAge51">51-60</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="headAge" id="headAge61" value="61-70" required>
+                            <label class="form-check-label" for="headAge61">61-70</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="headAge" id="headAgeOver" value="Over 70" required>
+                            <label class="form-check-label" for="headAgeOver">Over 70</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="headQualification" class="form-label">Qualification(s):</label>
+                    <textarea class="form-control" id="headQualification" name="headQualification" rows="3" required></textarea>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <label for="headPhone" class="form-label">Phone Number:</label>
+                        <input type="text" class="form-control" id="headPhone" name="headPhone" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="headWhatsapp" class="form-label">WhatsApp Number:</label>
+                        <input type="text" class="form-control" id="headWhatsapp" name="headWhatsapp">
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="headEmail" class="form-label">Email Address:</label>
+                    <input type="email" class="form-control" id="headEmail" name="headEmail" required>
+                </div>
+                
+                <h3 class="mb-4">Staffing</h3>
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>DESCRIPTION</th>
+                            <th>MALE</th>
+                            <th>FEMALE</th>
+                            <th>TOTAL</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Management</td>
+                            <td><input type="number" class="form-control" name="staffManagementMale" min="0"></td>
+                            <td><input type="number" class="form-control" name="staffManagementFemale" min="0"></td>
+                            <td><input type="number" class="form-control" name="staffManagementTotal" min="0"></td>
+                        </tr>
+                        <tr>
+                            <td>Teaching</td>
+                            <td><input type="number" class="form-control" name="staffTeachingMale" min="0"></td>
+                            <td><input type="number" class="form-control" name="staffTeachingFemale" min="0"></td>
+                            <td><input type="number" class="form-control" name="staffTeachingTotal" min="0"></td>
+                        </tr>
+                        <tr>
+                            <td>Non-Teaching</td>
+                            <td><input type="number" class="form-control" name="staffNonTeachingMale" min="0"></td>
+                            <td><input type="number" class="form-control" name="staffNonTeachingFemale" min="0"></td>
+                            <td><input type="number" class="form-control" name="staffNonTeachingTotal" min="0"></td>
+                        </tr>
+                        <tr>
+                            <td>TOTAL</td>
+                            <td><input type="number" class="form-control" name="staffTotalMale" min="0"></td>
+                            <td><input type="number" class="form-control" name="staffTotalFemale" min="0"></td>
+                            <td><input type="number" class="form-control" name="staffTotalTotal" min="0"></td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <h3 class="mb-4">Enrollment</h3>
+                <h5>NUR/PRY or BASIC</h5>
+                <table class="table table-bordered mb-4">
+                    <thead>
+                        <tr>
+                            <th>DESCRIPTION</th>
+                            <th>MALE</th>
+                            <th>FEMALE</th>
+                            <th>TOTAL</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Creche</td>
+                            <td><input type="number" class="form-control" name="enrollCrecheMale" min="0"></td>
+                            <td><input type="number" class="form-control" name="enrollCrecheFemale" min="0"></td>
+                            <td><input type="number" class="form-control" name="enrollCrecheTotal" min="0"></td>
+                        </tr>
+                        <tr>
+                            <td>Pre-Nursery</td>
+                            <td><input type="number" class="form-control" name="enrollPreNurseryMale" min="0"></td>
+                            <td><input type="number" class="form-control" name="enrollPreNurseryFemale" min="0"></td>
+                            <td><input type="number" class="form-control" name="enrollPreNurseryTotal" min="0"></td>
+                        </tr>
+                        <tr>
+                            <td>Nursery</td>
+                            <td><input type="number" class="form-control" name="enrollNurseryMale" min="0"></td>
+                            <td><input type="number" class="form-control" name="enrollNurseryFemale" min="0"></td>
+                            <td><input type="number" class="form-control" name="enrollNurseryTotal" min="0"></td>
+                        </tr>
+                        <tr>
+                            <td>Basic 1-3</td>
+                            <td><input type="number" class="form-control" name="enrollBasic13Male" min="0"></td>
+                            <td><input type="number" class="form-control" name="enrollBasic13Female" min="0"></td>
+                            <td><input type="number" class="form-control" name="enrollBasic13Total" min="0"></td>
+                        </tr>
+                        <tr>
+                            <td>Basic 4-6</td>
+                            <td><input type="number" class="form-control" name="enrollBasic46Male" min="0"></td>
+                            <td><input type="number" class="form-control" name="enrollBasic46Female" min="0"></td>
+                            <td><input type="number" class="form-control" name="enrollBasic46Total" min="0"></td>
+                        </tr>
+                        <tr>
+                            <td>Basic 7-9</td>
+                            <td><input type="number" class="form-control" name="enrollBasic79Male" min="0"></td>
+                            <td><input type="number" class="form-control" name="enrollBasic79Female" min="0"></td>
+                            <td><input type="number" class="form-control" name="enrollBasic79Total" min="0"></td>
+                        </tr>
+                        <tr>
+                            <td>TOTAL</td>
+                            <td><input type="number" class="form-control" name="enrollNurPryTotalMale" min="0"></td>
+                            <td><input type="number" class="form-control" name="enrollNurPryTotalFemale" min="0"></td>
+                            <td><input type="number" class="form-control" name="enrollNurPryTotalTotal" min="0"></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h5>SECONDARY SCHOOL</h5>
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>DESCRIPTION</th>
+                            <th>MALE</th>
+                            <th>FEMALE</th>
+                            <th>TOTAL</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>JSS 1-3 (Basic 7-9)</td>
+                            <td><input type="number" class="form-control" name="enrollJssMale" min="0"></td>
+                            <td><input type="number" class="form-control" name="enrollJssFemale" min="0"></td>
+                            <td><input type="number" class="form-control" name="enrollJssTotal" min="0"></td>
+                        </tr>
+                        <tr>
+                            <td>SSS 1-3</td>
+                            <td><input type="number" class="form-control" name="enrollSssMale" min="0"></td>
+                            <td><input type="number" class="form-control" name="enrollSssFemale" min="0"></td>
+                            <td><input type="number" class="form-control" name="enrollSssTotal" min="0"></td>
+                        </tr>
+                        <tr>
+                            <td>TOTAL</td>
+                            <td><input type="number" class="form-control" name="enrollSecondaryTotalMale" min="0"></td>
+                            <td><input type="number" class="form-control" name="enrollSecondaryTotalFemale" min="0"></td>
+                            <td><input type="number" class="form-control" name="enrollSecondaryTotalTotal" min="0"></td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <h3 class="mb-4">Awards / Recognition</h3>
+                <div class="mb-3">
+                    <label for="awards" class="form-label">List awards:</label>
+                    <textarea class="form-control" id="awards" name="awards" rows="4"></textarea>
+                </div>
+                <h3 class="mb-4">Any other information</h3>
+                <div class="mb-3">
+                    <textarea class="form-control" id="otherInfo" name="otherInfo" rows="4"></textarea>
+                </div>
                 <h3 class="mb-4">School Images</h3>
                 <div class="mb-3">
                     <label for="schoolLogo" class="form-label">School Logo</label>
@@ -197,44 +585,29 @@
                     <label for="schoolImages" class="form-label">School Images</label>
                     <input type="file" class="form-control" id="schoolImages" name="schoolImages[]" multiple accept="image/*">
                 </div>
-                <button type="button" class="btn btn-secondary me-2" onclick="prevStep(2)">Previous</button>
-                <button type="button" class="btn btn-success" onclick="nextStep(4)">Next</button>
-            </div>
-
-            <!-- Step 4: Account Creation -->
-            <div class="form-section" id="step4">
+                
                 <h3 class="mb-4">Account Creation</h3>
                 <div class="mb-3">
-                    <label for="username" class="form-label">Username*</label>
+                    <label for="username" class="form-label">Username:</label>
                     <input type="text" class="form-control" id="username" name="username" required>
                 </div>
                 <div class="mb-3">
-                    <label for="password" class="form-label">Password*</label>
+                    <label for="password" class="form-label">Password:</label>
                     <input type="password" class="form-control" id="password" name="password" required>
                 </div>
                 <div class="mb-3">
-                    <label for="confirmPassword" class="form-label">Confirm Password*</label>
+                    <label for="confirmPassword" class="form-label">Confirm Password:</label>
                     <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" required>
                 </div>
-                <button type="button" class="btn btn-secondary me-2" onclick="prevStep(3)">Previous</button>
-                <button type="button" class="btn btn-success" onclick="nextStep(5)">Next</button>
-            </div>
-
-            <!-- Step 5: Terms and Conditions -->
-            <div class="form-section" id="step5">
+                
                 <h3 class="mb-4">Terms and Conditions</h3>
-                <div class="mb-3">
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="termsAccept" name="termsAccept" required>
-                        <label class="form-check-label" for="termsAccept">
-                            I accept the terms and conditions
-                        </label>
-                    </div>
+                <div class="mb-3 form-check">
+                    <input type="checkbox" class="form-check-input" id="terms" name="terms" required>
+                    <label class="form-check-label" for="terms">I agree to the terms and conditions*</label>
                 </div>
-                <button type="button" class="btn btn-secondary me-2" onclick="prevStep(4)">Previous</button>
+                
                 <button type="submit" class="btn btn-success">Submit Registration</button>
             </div>
-        </form>
     </main>
 
     <!-- Footer -->
@@ -259,6 +632,45 @@
             </div>
         </div>
     </footer>
+   
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const soleSection = document.getElementById('soleSection');
+    const partnershipSection = document.getElementById('partnershipSection');
+    const radios = document.querySelectorAll('input[name="proprietorshipType"]');
+
+    function setDisabledForSection(section, disabled) {
+        if (!section) return;
+        section.querySelectorAll('input, select, textarea, button').forEach(el => {
+            // keep fieldsets/legend/labels unaffected; only form controls are disabled
+            el.disabled = disabled;
+        });
+        section.style.display = disabled ? 'none' : 'block';
+    }
+
+    function toggleSections() {
+        const checked = document.querySelector('input[name="proprietorshipType"]:checked');
+        if (!checked) {
+            // none selected: hide both and disable inputs so validation won't fail
+            setDisabledForSection(soleSection, true);
+            setDisabledForSection(partnershipSection, true);
+            return;
+        }
+        if (checked.value === 'sole') {
+            setDisabledForSection(soleSection, false);
+            setDisabledForSection(partnershipSection, true);
+        } else if (checked.value === 'partnership') {
+            setDisabledForSection(partnershipSection, false);
+            setDisabledForSection(soleSection, true);
+        }
+    }
+
+    radios.forEach(r => r.addEventListener('change', toggleSections));
+
+    // initialize on load
+    toggleSections();
+});
+</script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
@@ -267,11 +679,7 @@
                 document.querySelectorAll('.form-section').forEach(section => {
                     section.classList.remove('active');
                 });
-                document.querySelectorAll('.step-wizard-item').forEach(item => {
-                    item.classList.remove('active');
-                });
                 document.getElementById('step' + step).classList.add('active');
-                document.querySelector('.step-wizard-item:nth-child(' + step + ')').classList.add('active');
             }
         }
 

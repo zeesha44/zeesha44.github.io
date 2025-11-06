@@ -45,6 +45,9 @@ body {
 .nav-link:hover::after {
     width: 100%;
 }
+.navbar .nav-link.dropdown-toggle::after {
+    display: none !important;
+}
 
 .btn-outline-success {
     border-radius: 20px;
@@ -567,4 +570,46 @@ hr {
   opacity: 0;
   position: absolute;
   z-index: 0;
+}
+
+/* Multi-step form styles */
+.form-section {
+    display: none;
+}
+
+.form-section.active {
+    display: block;
+}
+/* ...existing code... */
+
+.hero-slide {
+    position: relative; /* needed so caption can be positioned inside slide */
+    background-size: cover;
+    background-position: center;
+    min-height: 60vh;
+}
+
+/* bottom-left caption */
+.hero-caption {
+    position: absolute;
+    left: 30px;
+    bottom: 30px;
+    max-width: 420px;
+    background: rgba(255,255,255,0.85); /* subtle panel so text is readable */
+    padding: 14px 16px;
+    border-radius: 8px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+/* smaller heading / text already used (h4 + .small) */
+/* responsive tweaks */
+@media (max-width: 768px) {
+    .hero-slide { min-height: 40vh; }
+    .hero-caption {
+        left: 12px;
+        right: 12px;
+        bottom: 12px;
+        max-width: none;
+        padding: 12px;
+    }
 }
